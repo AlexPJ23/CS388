@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyFirstApp</string>
+    <string name="hello_my_name_is_alex_joseph_and_i_love_dogs_but_cats_got_my_hear_forever">Hello My name is Alex Joseph and I love dogs but cats got my hear forever</string>
+    <string name="press_me">Press Me!</string>
 </resources>
