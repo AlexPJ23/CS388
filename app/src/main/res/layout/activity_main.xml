@@ -44,4 +44,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="670dp" />
 
+    <ListView
+        android:layout_width="397dp"
+        android:layout_height="441dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
