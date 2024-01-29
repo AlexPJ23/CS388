@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WordleProject</string>
+    <string name="guess">Guess</string>
+    <string name="enter_a_4_letter_word">Enter a 4 letter word</string>
 </resources>
