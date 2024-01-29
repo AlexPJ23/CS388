@@ -10,10 +10,12 @@ import android.util.Log
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import android.content.Context
+import android.view.View
+import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity() {
-    val wordToGuess : String = FourLetterWordList.getRandomFourLetterWord().uppercase()
+    var wordToGuess : String = FourLetterWordList.getRandomFourLetterWord().uppercase()
 
 //     * Parameters / Fields:
 //     *   wordToGuess : String - the target word the user is trying to guess
@@ -46,10 +48,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val button = findViewById<Button>(R.id.guessBtn)
+        val guessBtn = findViewById<Button>(R.id.guessBtn)
+        val resetBtn = findViewById<Button>(R.id.resetBtn)
         val inputText = findViewById<EditText>(R.id.inputText)
         var iterator  = 0
-
+        val secretBox = findViewById<TextView>(R.id.secretWord)
+        secretBox.text= wordToGuess;
 
         val attempts = listOf<TextView>(
             findViewById(R.id.GuessAttempt1),
@@ -61,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.GuessCheck2),
             findViewById(R.id.GuessCheck3)
         )
-        button.setOnClickListener {
+        guessBtn.setOnClickListener {
             this.currentFocus?.let { view ->
                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
                 imm?.hideSoftInputFromWindow(view.windowToken, 0)
@@ -71,17 +75,34 @@ class MainActivity : AppCompatActivity() {
                 val userGuess = inputText.text.toString().uppercase()
                 inputText.text.clear()
                 val result = checkGuess(userGuess)
-                Log.d("Logging",userGuess)
                 attempts[iterator].text = "Guess ${iterator + 1}: $userGuess"
                 checks[iterator].text = "Check: $result"
+                if( userGuess == wordToGuess ){
+                    guessBtn.isEnabled = false;
+                    Toast.makeText(it.context, "Congratulations You answered the correct word",Toast.LENGTH_SHORT).show()
+                    secretBox.visibility = View.VISIBLE;
+                    resetBtn.visibility = View.VISIBLE
+                }
                 iterator++
                 if(iterator == attempts.size){
-                    button.isEnabled = false;
+                    guessBtn.isEnabled = false;
                     Toast.makeText(it.context,"Exhausted all attempts. Game Over!",Toast.LENGTH_SHORT).show()
+                    secretBox.visibility = View.VISIBLE;
+                    resetBtn.visibility = View.VISIBLE
                 }
-            } else {
-                Toast.makeText(it.context,"Exhausted all attempts. Game Over!",Toast.LENGTH_SHORT)
             }
+        }
+        resetBtn.setOnClickListener {
+            wordToGuess = FourLetterWordList.getRandomFourLetterWord().uppercase()
+            iterator = 0
+            inputText.text.clear()
+            guessBtn.isEnabled = true
+            resetBtn.visibility = View.GONE
+            secretBox.visibility = View.GONE
+            secretBox.text= wordToGuess;
+            attempts.forEach { it.text = "" }
+            checks.forEach { it.text = "" }
+            Toast.makeText(applicationContext, "Game has been reset", Toast.LENGTH_SHORT).show()
         }
 
     }
