@@ -10,10 +10,10 @@ Time spent: **X** hours spent in total
 
 The following **required** functionality is completed:
 
-- [X] **User has 3 chances to guess a random 4 letter word**
-- [X] **After 3 guesses, user should no longer be able to submit another guess**
-- [X] **After each guess, user sees the "correctness" of the guess**
-- [X] **After all guesses are taken, user can see the target word displayed**
+- [&#10003;] **User has 3 chances to guess a random 4 letter word**
+- [&#10003;] **After 3 guesses, user should no longer be able to submit another guess**
+- [&#10003;] **After each guess, user sees the "correctness" of the guess**
+- [&#10003;] **After all guesses are taken, user can see the target word displayed**
 
 The following **optional** features are implemented:
 
