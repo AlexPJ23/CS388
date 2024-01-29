@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
+https://drive.google.com/file/d/1a4-sXaBL0tg88Moj9XfegDEXSlf_fAzL/view?usp=drive_link
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
