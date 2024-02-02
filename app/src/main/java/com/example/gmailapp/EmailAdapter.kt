@@ -43,7 +43,7 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // Get the data model based on position
-        val email = emails.get(position)
+        val email = emails[position]
         // Set item views based on views and data model
         holder.senderTextView.text = email.sender
         holder.titleTextView.text = email.title
