@@ -19,9 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:ems="10"
-        android:padding="10dp"
-        android:inputType="text"
         android:hint="Item Name"
+        android:inputType="text"
+        android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/itemName" />
 
     <EditText
-        android:id="@+id/editTextText16"
+        android:id="@+id/price"
         android:layout_width="134dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -54,6 +54,6 @@
         android:layout_marginEnd="16dp"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText16" />
+        app:layout_constraintTop_toBottomOf="@+id/price" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
