@@ -1,0 +1,44 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/item"
+        android:layout_width="212dp"
+        android:layout_height="52dp"
+        android:padding="5dp"
+        android:textSize="29sp"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Item" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:text="$10"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/store"
+        android:layout_width="83dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Store"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
