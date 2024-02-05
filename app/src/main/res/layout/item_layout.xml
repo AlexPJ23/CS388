@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:padding="0dp">
 
     <TextView
         android:id="@+id/item"
@@ -32,13 +32,16 @@
 
     <TextView
         android:id="@+id/store"
-        android:layout_width="83dp"
-        android:layout_height="34dp"
+        android:layout_width="82dp"
+        android:layout_height="44dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Store"
         android:gravity="center"
+        android:hint="Store"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        app:layout_constraintVertical_bias="0.36" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
