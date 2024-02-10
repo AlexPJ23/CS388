@@ -14,6 +14,8 @@ import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.RequestParams
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.codepath.bestsellerlistapp.R
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import okhttp3.Headers
 import org.json.JSONObject
 
@@ -77,8 +79,11 @@ class BestSellerBooksFragment : Fragment(), OnListFragmentInteractionListener {
                 val resultsJSON : JSONObject = json.jsonObject.get("results") as JSONObject
                 val booksRawJSON : String = resultsJSON.get("books").toString()
 
-                //val models : List<BestSellerBook> = // Fix me!
-                //recyclerView.adapter = BestSellerBooksRecyclerViewAdapter(models, this@BestSellerBooksFragment)
+                val gson = Gson()
+                val arrayBookType = object : TypeToken<List<BestSellerBook>>() {}.type
+                val models : List<BestSellerBook> = gson.fromJson(booksRawJSON, arrayBookType)
+                recyclerView.adapter = BestSellerBooksRecyclerViewAdapter(models, this@BestSellerBooksFragment)
+
 
                 // Look for this in Logcat:
                 Log.d("BestSellerBooksFragment", "response successful")

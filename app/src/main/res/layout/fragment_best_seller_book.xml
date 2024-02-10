@@ -6,23 +6,61 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="6dp">
-
     <TextView
-        android:id="@+id/book_title"
-        android:textAppearance="?attr/textAppearanceListItem"
+        android:id="@+id/ranking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
 
+    <ImageView
+        android:id="@+id/book_image"
+        android:layout_width="171dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="156dp"
+        app:layout_constraintStart_toEndOf="@+id/ranking"
+        app:layout_constraintTop_toTopOf="@+id/ranking"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="245dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/book_author"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
         android:textAppearance="?attr/textAppearanceListItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_title" />
+
+    <TextView
+        android:id="@+id/book_description"
+        android:layout_width="290dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_author" />
+
+    <Button
+        android:id="@+id/buy_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/book_title"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="40dp"
+        android:text="BUY ON AMAZON"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/book_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
