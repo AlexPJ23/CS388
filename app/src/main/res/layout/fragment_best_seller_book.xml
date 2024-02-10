@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
-    android:layout_width="match_parent"
+    android:layout_width="250dp"
     android:layout_height="wrap_content"
     android:layout_margin="6dp">
     <TextView
@@ -18,27 +18,27 @@
         android:id="@+id/book_image"
         android:layout_width="171dp"
         android:layout_height="108dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/ranking"
         app:layout_constraintTop_toTopOf="@+id/ranking"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
     <TextView
         android:id="@+id/book_title"
-        android:layout_width="245dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="213dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="124dp"
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/book_author"
-        android:layout_width="144dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="68dp"
+        android:layout_width="195dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,10 +46,10 @@
 
     <TextView
         android:id="@+id/book_description"
-        android:layout_width="290dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="136dp"
+        android:layout_width="195dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/book_author" />
 
@@ -57,8 +57,8 @@
         android:id="@+id/buy_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
         android:text="BUY ON AMAZON"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/book_description" />
